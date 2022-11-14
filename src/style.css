@@ -56,6 +56,34 @@ main {
   transform: translateX(-50%) scale(0.92);
 }
 
+#nav-toggle > i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  color: white;
+  opacity: 0;
+  transition: transform, opacity;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
+}
+
+#nav-toggle > i .icon-tabler {
+  width: 3rem;
+  height: 3rem;
+  stroke-width: 0.08rem;
+}
+
+body:not([data-nav="true"]) #nav-toggle > i.open {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+body:not([data-nav="false"]) #nav-toggle > i.close {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
 /*a {*/
 /*  font-weight: 500;*/
 /*  color: #646cff;*/

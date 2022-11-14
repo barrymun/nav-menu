@@ -1,9 +1,9 @@
-const toggleNav = (e: MouseEvent) => {
-  console.log(e)
+const toggleNav = () => {
+  document.body.dataset.nav = document.body.dataset.nav === "true" ? "false" : "true";
 };
 
-const navToggleBtn: HTMLElement | null = document.getElementById("nav-toggle");
+const toggleNavBtn: HTMLElement | null = document.getElementById("nav-toggle");
 
-if (navToggleBtn != null) navToggleBtn.onclick = toggleNav;
+if (toggleNavBtn != null) toggleNavBtn.onclick = toggleNav;
 
 export {};
