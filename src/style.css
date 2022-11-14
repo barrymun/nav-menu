@@ -1,19 +1,19 @@
-/*:root {*/
-/*  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;*/
-/*  font-size: 16px;*/
-/*  line-height: 24px;*/
-/*  font-weight: 400;*/
+:root {
+  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+  /*font-size: 16px;*/
+  /*line-height: 24px;*/
+  /*font-weight: 400;*/
 
-/*  color-scheme: light dark;*/
-/*  color: rgba(255, 255, 255, 0.87);*/
-/*  background-color: #242424;*/
+  /*color-scheme: light dark;*/
+  /*color: rgba(255, 255, 255, 0.87);*/
+  /*background-color: #242424;*/
 
-/*  font-synthesis: none;*/
-/*  text-rendering: optimizeLegibility;*/
-/*  -webkit-font-smoothing: antialiased;*/
-/*  -moz-osx-font-smoothing: grayscale;*/
-/*  -webkit-text-size-adjust: 100%;*/
-/*}*/
+  /*font-synthesis: none;*/
+  /*text-rendering: optimizeLegibility;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+  /*-webkit-text-size-adjust: 100%;*/
+}
 
 body, main {
   background-color: black;
@@ -143,4 +143,24 @@ body[data-nav="true"] nav > #nav-links {
   margin-top: 0.75rem;
   aspect-ratio: 5/3;
   object-fit: cover;  /* so that images are in proportion to the aspect ratio */
+}
+
+#inspiration {
+  position: absolute;
+  z-index: 1;
+  bottom: 1rem;
+  right: 2rem;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+
+  opacity: 0;
+  transition: opacity;
+  transition-timing-function: ease;
+  transition-duration: 1000ms;
+}
+
+body[data-nav="true"] #inspiration {
+  opacity: 1;
 }
