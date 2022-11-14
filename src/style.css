@@ -113,6 +113,7 @@ nav {
 
 #nav-links {
   display: flex;
+  justify-content: center;
   gap: clamp(1rem, 2vw, 2rem);
   margin-top: clamp(2rem, 2vw, 3rem);
   padding: 0rem clamp(1rem, 2vw, 2rem);
