@@ -69,12 +69,12 @@ main {
 }
 
 #nav-toggle > i .icon-tabler {
-  width: 3rem;
-  height: 3rem;
+  width: 2.5rem;
+  height: 2.5rem;
   stroke-width: 0.08rem;
 }
 
-body:not([data-nav="true"]) #nav-toggle > i.open {
+body:not([data-nav="true"]) #nav-toggle:hover > i.open {
   opacity: 1;
   transform: translate(-50%, -50%) scale(0.9);
 }
