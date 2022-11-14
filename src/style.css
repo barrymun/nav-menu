@@ -28,6 +28,9 @@ main {
   background-position: center 75%;
   position: relative;
   z-index: 2;
+  transition: transform;
+  transition-timing-function: ease;
+  transition-duration: 300ms;
 }
 
 #nav-toggle {
@@ -82,6 +85,10 @@ body:not([data-nav="true"]) #nav-toggle:hover > i.open {
 body:not([data-nav="false"]) #nav-toggle > i.close {
   opacity: 1;
   transform: translate(-50%, -50%) scale(0.9);
+}
+
+body[data-nav="true"] main {
+  transform: translateY(-50%);
 }
 
 /*a {*/
