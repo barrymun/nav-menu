@@ -108,7 +108,7 @@ nav {
   left: 0px;
   bottom: 0px;
   z-index: 1;
-  overflow: hidden;
+  overflow: scroll;
 }
 
 #nav-links {
@@ -123,8 +123,28 @@ nav {
   transition-duration: 300ms;
 }
 
+@media screen and (max-width: 900px) {
+  #nav-links {
+    display: flex;
+    /*justify-content: center;*/
+    align-items: center;
+    flex-direction: column;
+    gap: clamp(1rem, 2vw, 2rem);
+    margin-top: clamp(2rem, 2vw, 3rem);
+    padding: 0rem clamp(1rem, 2vw, 2rem);
+    transform: translateY(70%) scale(0.9);
+    transition: transform;
+    transition-timing-function: ease;
+    transition-duration: 300ms;
+  }
+}
+
 body[data-nav="true"] nav > #nav-links {
   transform: translateY(0%) scale(1);
+}
+
+.nav-link:is(:last-child) {
+  padding-bottom: 3rem;
 }
 
 #nav-links > .nav-link {
@@ -144,6 +164,26 @@ body[data-nav="true"] nav > #nav-links {
   margin-top: 0.75rem;
   aspect-ratio: 5/3;
   object-fit: cover;  /* so that images are in proportion to the aspect ratio */
+}
+
+@media screen and (max-width: 900px) {
+  #nav-links > .nav-link > .nav-link-image {
+    width: max(20vw, 300px);
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    aspect-ratio: 5/3;
+    object-fit: cover;  /* so that images are in proportion to the aspect ratio */
+  }
+}
+
+@media screen and (max-width: 300px) {
+  #nav-links > .nav-link > .nav-link-image {
+    width: max(20vw, 250px);
+    border-radius: 0.5rem;
+    margin-top: 0.75rem;
+    aspect-ratio: 5/3;
+    object-fit: cover;  /* so that images are in proportion to the aspect ratio */
+  }
 }
 
 #inspiration {
